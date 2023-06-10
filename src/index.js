@@ -1,8 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
-import Parallax from "parallax-js";
-
 
 class App extends React.Component {
 
@@ -327,7 +325,7 @@ class App extends React.Component {
                         <p>
                           <span className="bg"></span>
                           <span className="base"></span>
-                          <span className="text">Send Message</span>
+                          <span className="text">Send Message [NOT WORKING YET!]</span>
                         </p>
                       </a>
                     </div>
