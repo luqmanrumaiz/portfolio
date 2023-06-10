@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.cbfdf2d8.css",
+    "main.js": "/portfolio/static/js/main.f7d5f789.js",
+    "static/media/pfp.jpg": "/portfolio/static/media/pfp.916d13985c303a619ace.jpg",
+    "static/media/Poppins-SemiBold.ttf": "/portfolio/static/media/Poppins-SemiBold.cce5625b56ec678e4202.ttf",
+    "static/media/Federant.ttf": "/portfolio/static/media/Federant.98381a14e5cf66dbd4bf.ttf",
+    "index.html": "/portfolio/index.html",
+    "main.cbfdf2d8.css.map": "/portfolio/static/css/main.cbfdf2d8.css.map",
+    "main.f7d5f789.js.map": "/portfolio/static/js/main.f7d5f789.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cbfdf2d8.css",
+    "static/js/main.f7d5f789.js"
+  ]
+}
