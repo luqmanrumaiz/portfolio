@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.cbfdf2d8.css",
-    "main.js": "/portfolio/static/js/main.f7d5f789.js",
+    "main.css": "/portfolio/static/css/main.10e63bd9.css",
+    "main.js": "/portfolio/static/js/main.15559370.js",
     "static/media/pfp.jpg": "/portfolio/static/media/pfp.916d13985c303a619ace.jpg",
     "static/media/Poppins-SemiBold.ttf": "/portfolio/static/media/Poppins-SemiBold.cce5625b56ec678e4202.ttf",
     "static/media/Federant.ttf": "/portfolio/static/media/Federant.98381a14e5cf66dbd4bf.ttf",
+    "static/media/work1.png": "/portfolio/static/media/work1.51d4fbb569ee5f37e5a6.png",
+    "static/media/work3.png": "/portfolio/static/media/work3.c797a7728475874b373e.png",
+    "static/media/triangle-mountain-bg.svg": "/portfolio/static/media/triangle-mountain-bg.d7d8bf8243cdbe3243414ebff9e47c2c.svg",
+    "static/media/solo.svg": "/portfolio/static/media/solo.ea15e6fd45c0257219a79c05d7e19441.svg",
     "index.html": "/portfolio/index.html",
-    "main.cbfdf2d8.css.map": "/portfolio/static/css/main.cbfdf2d8.css.map",
-    "main.f7d5f789.js.map": "/portfolio/static/js/main.f7d5f789.js.map"
+    "main.10e63bd9.css.map": "/portfolio/static/css/main.10e63bd9.css.map",
+    "main.15559370.js.map": "/portfolio/static/js/main.15559370.js.map"
   },
   "entrypoints": [
-    "static/css/main.cbfdf2d8.css",
-    "static/js/main.f7d5f789.js"
+    "static/css/main.10e63bd9.css",
+    "static/js/main.15559370.js"
   ]
 }
