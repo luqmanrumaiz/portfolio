@@ -25,7 +25,7 @@ class App extends React.Component {
             <ul>
               <li>
                 <a href="https://solo.to/luqmanrumaiz" target="_blank">
-                  <img src="../images/solo.svg" alt="Github-Icon" />
+                  <img src={require('./images/solo.svg').default} alt="Github-Icon" />
                 </a>
               </li>
             </ul>
@@ -141,7 +141,7 @@ class App extends React.Component {
             </div>
 
             <div className="layer" id="layer6">
-              <img src="../images/triangle-mountain-bg.svg" />
+              <img src={require("./images/triangle-mountain-bg.svg").default}  alt="Mountain-Home-Page-Design"/>
               <div className="icon-scroll" />
             </div>
           </div>
@@ -160,7 +160,7 @@ class App extends React.Component {
                     <div className="button">
                       <a
                         className="white"
-                        href="../documents/CV.pdf"
+                        href="https://drive.google.com/file/d/1Lz2ynbRQsm-tZHw9m6mFD1W6hIhHoyo_/view?usp=sharing"
                         target="_blank"
                       >
                         <p>
@@ -194,7 +194,7 @@ class App extends React.Component {
 
               <div className="portfolio__container bd-grid">
                 <div className="portfolio__img">
-                  <img src="../images/work1.png" alt="" />
+                  <img src={require('./images/work1.png')} alt="Project-1-Thumbnail" />
                   <div className="portfolio__link">
                     <a className="portfolio__link-name">
                       ONCO - an Open Source mobile platform that specializes in
@@ -212,8 +212,7 @@ class App extends React.Component {
                   </div>
                 </div>
                 <div className="portfolio__img">
-                  <img src="../images/work2.png" alt="" />
-
+                  <img src={require('./images/work2.png')} alt="Project-2-Thumbnail" />
                   <div className="portfolio__link">
                     <a href="#" className="portfolio__link-name">
                       Train Ticket Booking System – Complete Application for
@@ -226,8 +225,7 @@ class App extends React.Component {
                   </div>
                 </div>
                 <div className="portfolio__img">
-                  <img src="../images/work3.png" alt="" />
-
+                  <img src={require('./images/work3.png')} alt="Project-3-Thumbnail" />
                   <div className="portfolio__link">
                     <a href="#" className="portfolio__link-name">
                       Premier League Manager - Web and GUI Application that
@@ -240,8 +238,7 @@ class App extends React.Component {
                   </div>
                 </div>
                 <div className="portfolio__img">
-                  <img src="../images/work4.png" alt="" />
-
+                  <img src={require('./images/work4.png')} alt="Project-4-Thumbnail" />
                   <div className="portfolio__link">
                     <a href="#" className="portfolio__link-name">
                       Network Flow Application - GUI Applicaiton that calculates
@@ -256,8 +253,7 @@ class App extends React.Component {
                   </div>
                 </div>
                 <div className="portfolio__img">
-                  <img src="../images/work5.png" alt="" />
-
+                  <img src={require('./images/work5.png')} alt="Project-5-Thumbnail" />
                   <div className="portfolio__link">
                     <a href="#" className="portfolio__link-name">
                       Car Quiz Game - Mobile Application that entertains the
@@ -270,8 +266,7 @@ class App extends React.Component {
                   </div>
                 </div>
                 <div className="portfolio__img">
-                  <img src="../images/work6.png" alt="" />
-
+                  <img src={require('./images/work6.png')} alt="Project-6-Thumbnail" />
                   <div className="portfolio__link">
                     <a href="#" className="portfolio__link-name">
                       Cinema Application – Mobile Application that allows Users
