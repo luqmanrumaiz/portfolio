@@ -5,6 +5,7 @@ import Parallax from "parallax-js";
 
 
 class App extends React.Component {
+
   render() {
     return (
       <div className="App">
@@ -334,6 +335,21 @@ class App extends React.Component {
               </div>
             </footer>
           </div>
+        </div>
+
+        <div className="side">
+          <a href="#">
+            About <i className="fa fa-address-card"></i>
+          </a>
+          <a href="#">
+            Skills <i className="fa-solid fa-brain"></i>
+          </a>
+          <a href="#">
+            Projects <i className="fa-solid fa-diagram-project"></i>
+          </a>
+          <a href="#">
+            Contact <i className="fa fa-phone-square"></i>
+          </a>
         </div>
       </div>
       );
