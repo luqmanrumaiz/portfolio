@@ -6,6 +6,12 @@ import Parallax from "parallax-js";
 
 class App extends React.Component {
 
+  calculateAge(dob) {
+    return Math.floor(
+      (new Date() - new Date(dob)) /
+      (365.25 * 24 * 60 * 60 * 1000))
+  };
+
   render() {
     return (
       <div className="App">
@@ -146,7 +152,7 @@ class App extends React.Component {
                 <div className="inner-container">
                   <h1>About Me</h1>
                   <p className="about-text">
-                    Hi! I'm Luqman Rumaiz a 17 year old Computer Science
+                    Hi! I'm Luqman Rumaiz a {this.calculateAge("2003-10-22")} year old Computer Science
                     Undergraduate at the University of Westminster. I live in
                     Colombo and aspire to be a Full Stack. Oh and I know a bit
                     of Machine Learning :)
