@@ -152,10 +152,10 @@ class App extends React.Component {
                 <div className="inner-container">
                   <h1>About Me</h1>
                   <p className="about-text">
-                    Hi! I'm Luqman Rumaiz a {this.calculateAge("2003-10-22")} year old Computer Science
-                    Undergraduate at the University of Westminster. I live in
-                    Colombo and aspire to be a Full Stack. Oh and I know a bit
-                    of Machine Learning :)
+                    Hello! My name is Luqman Rumaiz, a passionate {this.calculateAge("2003-10-22")}-year-old Computer Science undergraduate at the University of Westminster. I reside in Nugegoda in the capital of Sri Lanka, Colombo.
+                    <br />
+                    
+                    As an aspiring Full Stack developer and a devoted Data Science enthusiast, I am driven to explore the fascinating realms of technology and harness its potential to create meaningful solutions. I am eager to contribute my skills, knowledge, and enthusiasm to make a positive impact in the world of software development.
                     <br />
                     <div className="button">
                       <a
