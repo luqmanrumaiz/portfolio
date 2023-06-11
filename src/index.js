@@ -1,14 +1,27 @@
-import React from "react";
+import React, {useRef} from "react";
 import ReactDOM from 'react-dom/client';
 import "./index.scss";
 
 function App() {
+
+  const formRef = useRef(null)
+  const emailRef = useRef(null);
+  const nameRef = useRef(null);
+  const messageRef = useRef(null);
 
   const calculateAge = (dob) => {
     return Math.floor(
       (new Date() - new Date(dob)) /
       (365.25 * 24 * 60 * 60 * 1000)
       );
+  };
+
+  const handleAnchorClick = (e) => {
+    e.preventDefault();
+
+    if (formRef.current) {
+      formRef.current.submit();
+    }
   };
 
   return (
@@ -312,20 +325,38 @@ function App() {
             <div className="footer-right">
               <div className="footer-company-about" id="contact-me">
                 <span>Contact Me</span>
-                Feel free to send me an Email or dm on Discord I will try my
-                best to respond.
-                <form>
+                <form ref={formRef} id="contact-form">
+                  <label htmlFor="user_name">Name</label>
+                  <br/>
+                  <input
+                    type="text"
+                    id="name"
+                    name="user_name"
+                    ref={nameRef}
+                    placeholder="Luqman Rumaiz"
+                  />
+                  <label htmlFor="user_email">Email</label>
+                  <br/>
+                  <input
+                    type="email"
+                    id="email"
+                    name="user_email"
+                    ref={emailRef}
+                    placeholder="luqman.rumaiz@gmail.com"
+                  />
+                  <label htmlFor="message">Message</label>
                   <textarea
-                    id="subject"
-                    name="subject"
-                    placeholder="Hey Luqman.."
-                  ></textarea>
+                    id="message"
+                    name="message"
+                    ref={messageRef}
+                    placeholder="Hey Luqman 👋 ..."
+                  />
                   <div className="button" id="send-email">
-                    <a className="white" href="#">
+                    <a className="white">
                       <p>
                         <span className="bg"></span>
                         <span className="base"></span>
-                        <span className="text">Send Message [NOT WORKING YET!]</span>
+                        <span className="text">Send Message</span>
                       </p>
                     </a>
                   </div>
