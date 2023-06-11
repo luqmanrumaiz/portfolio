@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 
 class App extends React.Component {
-
   calculateAge(dob) {
     return Math.floor(
       (new Date() - new Date(dob)) /
@@ -149,7 +148,7 @@ class App extends React.Component {
               <div className="about-section">
                 <div className="inner-container">
                   <h1>About Me</h1>
-                  <p className="about-text">
+                  <div className="about-text">
                     Hello! My name is Luqman Rumaiz, a passionate {this.calculateAge("2003-10-22")}-year-old Computer Science undergraduate at the University of Westminster. I reside in Nugegoda in the capital of Sri Lanka, Colombo.
                     <br />
                     
@@ -168,7 +167,7 @@ class App extends React.Component {
                         </p>
                       </a>
                     </div>
-                  </p>
+                  </div>
                   <div className="skills">
                     <span>Full Stack Dev</span>
                     <span>Data Science Enthusiast</span>
@@ -310,11 +309,11 @@ class App extends React.Component {
               </div>
 
               <div className="footer-right">
-                <p className="footer-company-about" id="contact-me">
+                <div className="footer-company-about" id="contact-me">
                   <span>Contact Me</span>
                   Feel free to send me an Email or dm on Discord I will try my
                   best to respond.
-                  <form action="/action_page.php">
+                  <form>
                     <textarea
                       id="subject"
                       name="subject"
@@ -330,7 +329,7 @@ class App extends React.Component {
                       </a>
                     </div>
                   </form>
-                </p>
+                </div>
               </div>
             </footer>
           </div>
