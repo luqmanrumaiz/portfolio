@@ -1,6 +1,8 @@
 import React, {useRef} from "react";
 import ReactDOM from 'react-dom/client';
 import emailjs from '@emailjs/browser';
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 import "./index.scss";
 
 function App() {
@@ -22,9 +24,28 @@ function App() {
 
     emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, formRef.current, process.env.REACT_APP_PUBLIC_KEY)
       .then((result) => {
+        toast.success('Your message was sucessfully sent to Luqman !', {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         console.log(result.text);
         }, (error) => {
-        console.log(error.text);
+        toast.error(error.text, {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
       });
   };
 
@@ -393,6 +414,7 @@ function App() {
           Contact <i className="fa fa-phone-square"></i>
         </a>
       </div>
+      <ToastContainer />
     </div>
     );
 }
