@@ -1,5 +1,6 @@
 import React, {useRef} from "react";
 import ReactDOM from 'react-dom/client';
+import emailjs from '@emailjs/browser';
 import "./index.scss";
 
 function App() {
@@ -14,6 +15,17 @@ function App() {
       (new Date() - new Date(dob)) /
       (365.25 * 24 * 60 * 60 * 1000)
       );
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, formRef.current, process.env.REACT_APP_PUBLIC_KEY)
+      .then((result) => {
+        console.log(result.text);
+        }, (error) => {
+        console.log(error.text);
+      });
   };
 
   const handleAnchorClick = (e) => {
@@ -352,7 +364,7 @@ function App() {
                     placeholder="Hey Luqman 👋 ..."
                   />
                   <div className="button" id="send-email">
-                    <a className="white">
+                    <a onClick={(e) => {sendEmail(e)}} className="white">
                       <p>
                         <span className="bg"></span>
                         <span className="base"></span>
