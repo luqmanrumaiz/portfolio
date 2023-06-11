@@ -130,7 +130,7 @@ class App extends React.Component {
             <path d="M 50,10 90,90 10,90 z" />
           </svg>
 
-          <div className="parallax">
+          <div>
             <div className="layer" id="layer1">
               <h1>
                 Hey I am Luqman Rumaiz{" "}
@@ -145,7 +145,7 @@ class App extends React.Component {
           </div>
 
           <div className="content">
-            <div id="about">
+            <div id="about-me">
               <div className="about-section">
                 <div className="inner-container">
                   <h1>About Me</h1>
@@ -177,7 +177,7 @@ class App extends React.Component {
               </div>
             </div>
 
-            <div className="wrapper">
+            <div className="wrapper" id="skills">
               <h1>Skills</h1>
               <div className="skills-container">
                 <iframe
@@ -188,7 +188,7 @@ class App extends React.Component {
             </div>
 
             <section className="portfolio section" id="portfolio">
-              <h1>Portfolio</h1>
+              <h1>Projects</h1>
 
               <div className="portfolio__container bd-grid">
                 <div className="portfolio__img">
@@ -310,7 +310,7 @@ class App extends React.Component {
               </div>
 
               <div className="footer-right">
-                <p className="footer-company-about">
+                <p className="footer-company-about" id="contact-me">
                   <span>Contact Me</span>
                   Feel free to send me an Email or dm on Discord I will try my
                   best to respond.
@@ -337,16 +337,16 @@ class App extends React.Component {
         </div>
 
         <div className="side">
-          <a href="#">
+          <a href="#about-me">
             About <i className="fa fa-address-card"></i>
           </a>
-          <a href="#">
+          <a href="#skills">
             Skills <i className="fa-solid fa-brain"></i>
           </a>
-          <a href="#">
+          <a href="#portfolio">
             Projects <i className="fa-solid fa-diagram-project"></i>
           </a>
-          <a href="#">
+          <a href="#contact-me">
             Contact <i className="fa fa-phone-square"></i>
           </a>
         </div>
