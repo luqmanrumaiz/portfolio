@@ -60,8 +60,8 @@ function App() {
         <div className="nav-links">
           <ul>
             <li>
-              <a href="https://solo.to/luqmanrumaiz" target="_blank">
-                <img src={require('./images/solo.svg').default} alt="Github-Icon" />
+              <a href="https://bento.me/luqman-rumaiz" target="_blank">
+                <img src={require('./images/bento.png')} width="64" height="64" alt="bento.me Icon" />
               </a>
             </li>
           </ul>
