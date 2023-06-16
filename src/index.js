@@ -49,14 +49,6 @@ function App() {
       });
   };
 
-  const handleAnchorClick = (e) => {
-    e.preventDefault();
-
-    if (formRef.current) {
-      formRef.current.submit();
-    }
-  };
-
   return (
     <div className="App">
       <nav>
