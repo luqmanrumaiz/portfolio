@@ -196,13 +196,13 @@ function App() {
                   <div className="button">
                     <a
                       className="white"
-                      href="https://drive.google.com/file/d/1Lz2ynbRQsm-tZHw9m6mFD1W6hIhHoyo_/view?usp=sharing"
+                      href="https://drive.google.com/drive/folders/1qBCy-1Fco8hVaJB_mlMtWGxuZSX-G3S9?usp=sharing"
                       target="_blank"
                     >
                       <p>
                         <span className="bg"></span>
                         <span className="base"></span>
-                        <span className="text">Download CV</span>
+                        <span className="text">Download Resume</span>
                       </p>
                     </a>
                   </div>
