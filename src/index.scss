@@ -341,7 +341,7 @@ iframe {
     height: 250px;
 
     border-radius: 50%;
-    background-image: url("images/pfp.jpg");
+    background-image: url("images/pfp.png");
     background-size: cover;
     transition: ease-in-out 0.3s;
 
@@ -813,7 +813,7 @@ textarea {
 }
 
 .about-section {
-  background: url(./images/pfp.jpg) no-repeat left;
+  background: url(./images/pfp.png) no-repeat left;
   background-size: 55%;
   overflow: hidden;
   padding: 100px 0;

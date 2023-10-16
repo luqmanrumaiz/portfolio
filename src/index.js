@@ -1,53 +1,60 @@
-import React, {useRef} from "react";
-import ReactDOM from 'react-dom/client';
-import emailjs from '@emailjs/browser';
-import { toast, ToastContainer } from 'react-toastify';
-import "react-toastify/dist/ReactToastify.css";
-import "./index.scss";
+import React, { useRef } from 'react'
+import ReactDOM from 'react-dom/client'
+import emailjs from '@emailjs/browser'
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import './index.scss'
 
 function App() {
-
   const formRef = useRef(null)
-  const emailRef = useRef(null);
-  const nameRef = useRef(null);
-  const messageRef = useRef(null);
+  const emailRef = useRef(null)
+  const nameRef = useRef(null)
+  const messageRef = useRef(null)
 
   const calculateAge = (dob) => {
     return Math.floor(
-      (new Date() - new Date(dob)) /
-      (365.25 * 24 * 60 * 60 * 1000)
-      );
-  };
+      (new Date() - new Date(dob)) / (365.25 * 24 * 60 * 60 * 1000)
+    )
+  }
 
   const sendEmail = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, formRef.current, process.env.REACT_APP_PUBLIC_KEY)
-      .then((result) => {
-        toast.success('Your message was sucessfully sent to Luqman !', {
-          position: "bottom-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-        console.log(result.text);
-        }, (error) => {
-        toast.error(error.text, {
-          position: "bottom-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-      });
-  };
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        formRef.current,
+        process.env.REACT_APP_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          toast.success('Your message was sucessfully sent to Luqman !', {
+            position: 'bottom-center',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'light',
+          })
+          console.log(result.text)
+        },
+        (error) => {
+          toast.error(error.text, {
+            position: 'bottom-center',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'light',
+          })
+        }
+      )
+  }
 
   return (
     <div className="App">
@@ -61,7 +68,12 @@ function App() {
           <ul>
             <li>
               <a href="https://bento.me/luqman-rumaiz" target="_blank">
-                <img src={require('./images/bento.png')} width="64" height="64" alt="bento.me Icon" />
+                <img
+                  src={require('./images/bento.png')}
+                  width="64"
+                  height="64"
+                  alt="bento.me Icon"
+                />
               </a>
             </li>
           </ul>
@@ -171,13 +183,16 @@ function App() {
         <div>
           <div className="layer" id="layer1">
             <h1>
-              Hey I am Luqman Rumaiz{" "}
+              Hey I am Luqman Rumaiz{' '}
               <span id="red">Welcome to My Portfolio</span>
             </h1>
           </div>
 
           <div className="layer" id="layer6">
-            <img src={require("./images/triangle-mountain-bg.svg").default}  alt="Mountain-Home-Page-Design"/>
+            <img
+              src={require('./images/triangle-mountain-bg.svg').default}
+              alt="Mountain-Home-Page-Design"
+            />
             <div className="icon-scroll" />
           </div>
         </div>
@@ -188,10 +203,25 @@ function App() {
               <div className="inner-container">
                 <h1>About Me</h1>
                 <div className="about-text">
-                  Hello! My name is Luqman Rumaiz, a passionate {calculateAge("2003-10-22")}-year-old Computer Science undergraduate at the University of Westminster. I reside in Nugegoda in the capital of Sri Lanka, Colombo.
+                  Hello! My name is Luqman Rumaiz, a passionate{' '}
+                  {calculateAge('2003-10-22')}-year-old Computer Science
+                  Graduate with a BSc (Hons) in Computer Science with
+                  First-Class Honors from the University of Westminster. I
+                  reside in Nugegoda in the capital of Sri Lanka, Colombo.
                   <br />
-
-                  As an aspiring Full Stack developer and a devoted Data Science enthusiast, I am driven to explore the fascinating realms of technology and harness its potential to create meaningful solutions. I am eager to contribute my skills, knowledge, and enthusiasm to make a positive impact in the world of software development.
+                  <br />
+                  Luqman is a passionate and innovative software engineer,
+                  specializing in full-stack development, cloud computing, and
+                  AI. He excels at taking on complex projects and pushing
+                  himself to his highest capability in order to get the job
+                  done. He is consistently reliable and highly collaborative,
+                  making him an invaluable asset to any team. Luqman is a
+                  passionate and innovative software engineer, specializing in
+                  full-stack development, cloud computing, and AI. He excels at
+                  taking on complex projects and pushing himself to his highest
+                  capability in order to get the job done. He is consistently
+                  reliable and highly collaborative, making him an invaluable
+                  asset to any team.
                   <br />
                   <div className="button">
                     <a
@@ -230,7 +260,10 @@ function App() {
 
             <div className="portfolio__container bd-grid">
               <div className="portfolio__img">
-                <img src={require('./images/work1.png')} alt="Project-1-Thumbnail" />
+                <img
+                  src={require('./images/work1.png')}
+                  alt="Project-1-Thumbnail"
+                />
                 <div className="portfolio__link">
                   <a className="portfolio__link-name">
                     ONCO - an Open Source mobile platform that specializes in
@@ -239,8 +272,8 @@ function App() {
                     diagnosis, and machine learning and risk models for
                     prognosis. The main aim is to bridge the gap between many
                     mediocre and unreliable diagnosis and prognosis
-                    applications, while at the same time making it more
-                    enhanced and effective
+                    applications, while at the same time making it more enhanced
+                    and effective
                     <br />
                     <br /> Flutter, Firebase, Flask, Azure, OpenCV, Heroku,
                     TensorFlow | Keras | Sci-kit Learn | NLTK, Python
@@ -248,7 +281,10 @@ function App() {
                 </div>
               </div>
               <div className="portfolio__img">
-                <img src={require('./images/work2.png')} alt="Project-2-Thumbnail" />
+                <img
+                  src={require('./images/work2.png')}
+                  alt="Project-2-Thumbnail"
+                />
                 <div className="portfolio__link">
                   <a href="#" className="portfolio__link-name">
                     Train Ticket Booking System – Complete Application for
@@ -261,12 +297,15 @@ function App() {
                 </div>
               </div>
               <div className="portfolio__img">
-                <img src={require('./images/work3.png')} alt="Project-3-Thumbnail" />
+                <img
+                  src={require('./images/work3.png')}
+                  alt="Project-3-Thumbnail"
+                />
                 <div className="portfolio__link">
                   <a href="#" className="portfolio__link-name">
-                    Premier League Manager - Web and GUI Application that
-                    gives Managers the ability to manage their English
-                    Football League.
+                    Premier League Manager - Web and GUI Application that gives
+                    Managers the ability to manage their English Football
+                    League.
                     <br />
                     <br />
                     Angular, Playframework, Java, JavaFX
@@ -274,14 +313,17 @@ function App() {
                 </div>
               </div>
               <div className="portfolio__img">
-                <img src={require('./images/work4.png')} alt="Project-4-Thumbnail" />
+                <img
+                  src={require('./images/work4.png')}
+                  alt="Project-4-Thumbnail"
+                />
                 <div className="portfolio__link">
                   <a href="#" className="portfolio__link-name">
                     Network Flow Application - GUI Applicaiton that calculates
-                    and shows the User the optimal Paths taken to push Flow
-                    from a Source to a Target along with other handy features
-                    like Inserting, Editing & Deleting Edges and Visualizing
-                    the Graph
+                    and shows the User the optimal Paths taken to push Flow from
+                    a Source to a Target along with other handy features like
+                    Inserting, Editing & Deleting Edges and Visualizing the
+                    Graph
                     <br />
                     <br />
                     Java, JavaFX
@@ -289,12 +331,15 @@ function App() {
                 </div>
               </div>
               <div className="portfolio__img">
-                <img src={require('./images/work5.png')} alt="Project-5-Thumbnail" />
+                <img
+                  src={require('./images/work5.png')}
+                  alt="Project-5-Thumbnail"
+                />
                 <div className="portfolio__link">
                   <a href="#" className="portfolio__link-name">
-                    Car Quiz Game - Mobile Application that entertains the
-                    User with 4 Different Quiz Modes along with the option for
-                    a Timer in each
+                    Car Quiz Game - Mobile Application that entertains the User
+                    with 4 Different Quiz Modes along with the option for a
+                    Timer in each
                     <br />
                     <br />
                     Android
@@ -302,12 +347,15 @@ function App() {
                 </div>
               </div>
               <div className="portfolio__img">
-                <img src={require('./images/work6.png')} alt="Project-6-Thumbnail" />
+                <img
+                  src={require('./images/work6.png')}
+                  alt="Project-6-Thumbnail"
+                />
                 <div className="portfolio__link">
                   <a href="#" className="portfolio__link-name">
-                    Cinema Application – Mobile Application that allows Users
-                    to Add, Edit, Delete, Favorite, Search Movies and View
-                    Ratings for a Movie
+                    Cinema Application – Mobile Application that allows Users to
+                    Add, Edit, Delete, Favorite, Search Movies and View Ratings
+                    for a Movie
                     <br />
                     <br />
                     Android SQLite
@@ -328,7 +376,9 @@ function App() {
                 <a href="#"> Skils</a>·<a href="#">Projects</a>
               </p>
 
-              <p className="footer-company-name">Luqman &copy; {new Date().getFullYear()}</p>
+              <p className="footer-company-name">
+                Luqman &copy; {new Date().getFullYear()}
+              </p>
             </div>
 
             <div className="footer-center">
@@ -352,7 +402,7 @@ function App() {
                 <span>Contact Me</span>
                 <form ref={formRef} id="contact-form">
                   <label htmlFor="user_name">Name</label>
-                  <br/>
+                  <br />
                   <input
                     type="text"
                     id="name"
@@ -361,7 +411,7 @@ function App() {
                     placeholder="Luqman Rumaiz"
                   />
                   <label htmlFor="user_email">Email</label>
-                  <br/>
+                  <br />
                   <input
                     type="email"
                     id="email"
@@ -377,7 +427,12 @@ function App() {
                     placeholder="Hey Luqman 👋 ..."
                   />
                   <div className="button" id="send-email">
-                    <a onClick={(e) => {sendEmail(e)}} className="white">
+                    <a
+                      onClick={(e) => {
+                        sendEmail(e)
+                      }}
+                      className="white"
+                    >
                       <p>
                         <span className="bg"></span>
                         <span className="base"></span>
@@ -408,12 +463,12 @@ function App() {
       </div>
       <ToastContainer />
     </div>
-    );
+  )
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <App/>
+    <App />
   </React.StrictMode>
-  );
+)
